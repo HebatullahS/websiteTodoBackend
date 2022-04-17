@@ -13,18 +13,15 @@ public class HelloWorldController {
 		return "Hello World";
 	}
 	
-	@GetMapping(path="/hello-world-bean")
+	@GetMapping(path="/basicauth")
 	public HelloWorldBean helloWorldbean() {
-		throw new RuntimeException("Some Error has Happened! Contact to support ****-****");
-
-		//return new HelloWorldBean("Hello World Bean");
+	//throw new RuntimeException("Some Error has Happened! Contact to support ****-****");
+		return new HelloWorldBean("you are authenticated");
 	}
 	
-	
-	@GetMapping(path="/hello-world/path-variable/{name}")
-	
-	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
-		return new HelloWorldBean(String.format("Hello World %s",name));
-	}
+//	@GetMapping(path="/hello-world/path-variable/{name}")
+//	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+//		return new HelloWorldBean(String.format("Hello World %s",name));
+	//}
 
 }
